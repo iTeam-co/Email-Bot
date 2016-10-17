@@ -20,7 +20,7 @@ def newmail(m):
 @bot.message_handler(commands=['mails'])
 def mails(m):
     try :
-        #initialize Temp-Male and read recieved Mails.
+        #initialize Temp-Mail and read recieved Mails.
         mail = r.get('email:{}:mail'.format(str(m.from_user.id)))
         if not mail:
                 bot.send_message(m.from_user.id, 'Make an email first.\nUse /newmail')
